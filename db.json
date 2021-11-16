@@ -1,0 +1,14 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "title": "Title One",
+      "titleQuery": "title_one",
+      "price": "6",
+      "youtubeLink": "https://www.youtube-nocookie.com/embed/I_awMU7plpc",
+      "cloudinaryLink": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTcZXgRJ67ocy4TOySuLwMgmFCzQ0tyJq5wGw&usqp=CAU",
+      "pagesQuantity": 2,
+      "createdAt": "2021-11-15T10:48:41.748+00:00"
+    }
+  ]
+}

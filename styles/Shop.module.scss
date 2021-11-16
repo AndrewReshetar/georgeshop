@@ -1,0 +1,106 @@
+@import "./fonts";
+@import "./colors";
+@import "./media-queries";
+
+.shopWrapper {
+  padding-top: 10rem;
+  background-color: $black;
+  .shopFilter {
+    border-top: 1px solid $white;
+    border-bottom: 1px solid $white;
+    margin: 1rem 8rem;
+    height: 5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .shopSortBy {
+      width: 18%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .shopFindProduct {
+      width: 34%;
+      height: 36px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      input {
+        width: 30rem;
+        height: 100%;
+        border: none;
+        outline: none;
+        background: #333;
+        color: #fff;
+        border-radius: 2px;
+        -webkit-border-radius: 2px;
+        -moz-border-radius: 2px;
+        -ms-border-radius: 2px;
+        -o-border-radius: 2px;
+        padding: 0 1.5rem;
+        font-size: 1.6rem;
+        font-family: "InterRegular";
+        &::placeholder {
+          color: #fff;
+        }
+      }
+      .productsCount {
+        font-family: "InterMedium";
+        color: $lightred;
+        font-size: 1.6rem;
+      }
+    }
+  }
+  .productsGrid {
+    margin: 2rem 8rem;
+    display: grid;
+    grid-template-columns: repeat(4, 28rem);
+    grid-template-rows: repeat(auto-fill, 1fr);
+    justify-items: center;
+    align-items: center;
+    justify-content: center;
+    align-content: space-around;
+    grid-gap: 4rem;
+    padding: 2rem;
+    .productWrapper {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      cursor: pointer;
+      .productImg {
+        width: 20rem;
+        height: 26rem;
+      }
+      .productContent {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        .productTitle {
+          margin: 0.5rem;
+          font-size: 1.8rem;
+          font-family: "InterMedium";
+        }
+        .productPrice {
+          font-family: "InterLight";
+        }
+      }
+      &:hover {
+        .productImg {
+          zoom: 100.1%;
+        }
+
+        .productTitle,
+        .productPrice {
+          color: $lightred;
+        }
+      }
+    }
+  }
+}
+
+.noItemsFound {
+  position: absolute;
+  top: 50%;
+  color: $lightred;
+  font-size: 2rem;
+}

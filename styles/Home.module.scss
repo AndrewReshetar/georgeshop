@@ -1,0 +1,50 @@
+@import "./fonts";
+@import "./colors";
+@import "./media-queries";
+
+.homeWrapper {
+  height: 100vh;
+  background-image: url("../public/george_background_home.jpg");
+  padding-top: 10rem;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  .blackBackground {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 0;
+    background-color: black;
+    opacity: 0.7;
+  }
+}
+
+.mainHeadline {
+  position: absolute;
+  left: 10rem;
+  span {
+    font-family: "ExtraLight";
+    display: block;
+    font-size: 16rem;
+    color: $lightred;
+  }
+
+  .headlineName {
+    letter-spacing: -1rem;
+  }
+  .headlineSurname {
+    letter-spacing: -1rem;
+    line-height: 10rem;
+  }
+  .headlineDescription {
+    font-size: 4rem;
+    color: $white;
+    line-height: 16rem;
+    font-family: "InterLight";
+  }
+  .linkToAboutPage {
+    padding: 1.6rem 5rem;
+  }
+}

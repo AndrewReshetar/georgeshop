@@ -1,0 +1,25 @@
+@import "./media-queries";
+
+.header {
+  height: 10vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  backdrop-filter: blur(2px);
+  z-index: 1;
+}
+
+.nav {
+  height: 90%;
+  ul {
+    display: flex;
+    height: 100%;
+    justify-content: flex-end;
+    align-items: flex-end;
+    li {
+      font-size: 1.6rem;
+      margin-right: 10rem;
+    }
+  }
+}

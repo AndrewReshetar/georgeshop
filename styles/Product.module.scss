@@ -1,0 +1,152 @@
+@import "./fonts";
+@import "./colors";
+@import "./media-queries";
+
+.productWrapper {
+  height: 84vh;
+  margin-top: 10rem;
+  margin-left: 14rem;
+  margin-right: 14rem;
+  .productGrid {
+    display: grid;
+    justify-content: space-between;
+    grid-template-columns: 32% 64%;
+    position: relative;
+    .productBuyWrapper {
+      border: 1px solid rgb(97, 97, 97);
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 22rem;
+      height: 16rem;
+      display: flex;
+      flex-direction: column;
+      font-family: "InterSemiBold";
+      .productBuyHeadline {
+        display: flex;
+        justify-content: space-between;
+        border-bottom: 1px solid rgb(97, 97, 97);
+        padding: 1rem;
+        span {
+          display: block;
+          font-size: 1.5rem;
+        }
+      }
+      .productBuyPrice {
+        display: flex;
+        justify-content: space-between;
+        border-bottom: 1px solid rgb(97, 97, 97);
+        padding: 1rem;
+        span {
+          display: block;
+          font-size: 1.5rem;
+        }
+      }
+      .productBuyButton {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+        button {
+          width: 90%;
+          height: 4rem;
+          background-color: #f8604c;
+          color: $white;
+          font-size: medium;
+          &:hover {
+            background-color: transparent;
+            border: 1px solid $lightred;
+            color: $lightred;
+          }
+        }
+      }
+    }
+    .productImage {
+      position: relative;
+      .zoomIcon {
+        display: none;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 10rem;
+        height: 10rem;
+        -webkit-transform: translateX(-50%) translateY(-50%);
+        transform: translateX(-50%) translateY(-50%);
+        background-image: url("../public/zoomIcon.png");
+        background-size: contain;
+        opacity: 0.7;
+      }
+      img {
+        width: 100%;
+        height: 54rem;
+        cursor: pointer;
+      }
+      &:hover {
+        .zoomIcon {
+          display: block;
+        }
+      }
+    }
+    .productContent {
+      display: flex;
+      flex-direction: column;
+      .productHeadline {
+        h2 {
+          font-size: 9.2rem;
+          font-family: "ExtraLight";
+          margin: 0;
+          color: $white;
+          width: 60%;
+        }
+        h4 {
+          padding: 1rem;
+          font-family: "InterLight";
+          font-size: 1.6rem;
+          width: 62%;
+          border-bottom: 1px solid $white;
+          span {
+            font-size: 1.6rem;
+            font-family: "ExtraLight";
+            padding-left: 5px;
+          }
+        }
+      }
+      .youtubeLink {
+        height: 27.5rem;
+        width: 50rem;
+        iframe {
+          width: 100%;
+          height: 100%;
+        }
+      }
+    }
+  }
+  .backButton {
+    margin-bottom: 3rem;
+    button {
+      width: 15rem;
+      height: 5rem;
+      border: none;
+      outline: none;
+      background: transparent;
+      color: $white;
+      font-size: 1.6rem;
+      font-family: "InterRegular";
+      border: 2px solid $white;
+      &:hover {
+        border: 2px solid $lightred;
+        color: $lightred;
+        font-size: 1.7rem;
+      }
+    }
+  }
+}
+
+.modalImageWrapper {
+  width: 100%;
+  height: 100%;
+  img {
+    width: 100%;
+    height: 100%;
+  }
+}

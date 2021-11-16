@@ -1,0 +1,62 @@
+@import "./fonts";
+@import "./colors";
+@import "./media-queries";
+
+.successPageWrapper {
+  height: 100vh;
+  background-color: $black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  .successPageContent {
+    width: 80%;
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    .successImageBlock {
+      height: 30%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      .successIcon {
+        width: 12rem;
+        height: 12rem;
+        background-image: url("../public/success.png");
+        background-size: contain;
+      }
+    }
+    .successMessageBlock {
+      height: 60%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      h2 {
+        font-size: 6rem;
+        font-family: "InterLight";
+        color: $white;
+      }
+      p {
+        font-size: 2.4rem;
+        font-family: "InterMedium";
+      }
+    }
+    .backHomeBlock {
+      height: 10%;
+      display: flex;
+      justify-content: center;
+      button {
+        width: 40%;
+        height: 100%;
+        background-color: #f8604c;
+        color: $white;
+        font-size: large;
+        &:hover {
+          background-color: transparent;
+          border: 1px solid $lightred;
+          color: $lightred;
+        }
+      }
+    }
+  }
+}
