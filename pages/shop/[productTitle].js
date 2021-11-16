@@ -89,8 +89,10 @@ const ProductId = ({ product }) => {
 export default ProductId;
 
 export async function getStaticPaths() {
-  const response = await fetch("http://localhost:3000/api/products");
-  const { products } = await response.json();
+  const response = await fetch(
+    "https://my-json-server.typicode.com/AndrewReshetar/georgeshop/products"
+  );
+  const products = await response.json();
   const paths = products.map((p) => {
     return {
       params: {
@@ -107,12 +109,12 @@ export async function getStaticPaths() {
 export async function getStaticProps(context) {
   const { params } = context;
   const response = await fetch(
-    `http://localhost:3000/api/products/${params.productTitle}`
+    `https://my-json-server.typicode.com/AndrewReshetar/georgeshop/products/?titleQuery=${params.productTitle}`
   );
-  const { product } = await response.json();
+  const product = await response.json();
   return {
     props: {
-      product,
+      product: product[0],
     },
   };
 }
