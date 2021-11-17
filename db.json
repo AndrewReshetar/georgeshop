@@ -2,12 +2,12 @@
   "products": [
     {
       "id": 1,
-      "title": "Title One",
-      "titleQuery": "title_one",
+      "title": "Nocturne",
+      "titleQuery": "norturne",
       "price": "6",
-      "youtubeLink": "https://www.youtube-nocookie.com/embed/I_awMU7plpc",
+      "youtubeLink": "https://www.youtube-nocookie.com/embed/MOYBw9q2x7g",
       "cloudinaryLink": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTcZXgRJ67ocy4TOySuLwMgmFCzQ0tyJq5wGw&usqp=CAU",
-      "pagesQuantity": 2,
+      "pagesQuantity": 4,
       "createdAt": "2021-11-15T10:48:41.748+00:00"
     }
   ]

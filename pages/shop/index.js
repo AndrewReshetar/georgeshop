@@ -4,6 +4,9 @@ import styles from "../../styles/Shop.module.scss";
 import styled from "@emotion/styled";
 import Select from "react-dropdown-select";
 import "animate.css";
+import Image from "next/image";
+//images
+import nocturne from "../../public/nocturne.jpg";
 
 const sortOptions = [
   { label: "Alphabetically, A-Z", value: "az" },
@@ -13,6 +16,9 @@ const sortOptions = [
   { label: "Date, old to new", value: "do" },
   { label: "Date, new to old", value: "dn" },
 ];
+const notesImages = {
+  nocturne: nocturne,
+};
 
 const Shop = ({ productsData }) => {
   const [searchValue, setSearchValue] = useState("");
@@ -105,7 +111,11 @@ const Shop = ({ productsData }) => {
               <Link href={`shop/${p.titleQuery}`} passHref key={p.id}>
                 <div className={styles.productWrapper}>
                   <div className={styles.productImg}>
-                    <img src={p.cloudinaryLink} alt={p.title} />
+                    <Image
+                      src={notesImages[p.titleQuery]}
+                      alt={p.title}
+                      placeholder="blur"
+                    />
                   </div>
                   <div className={styles.productContent}>
                     <span className={styles.productTitle}>{p.title}</span>
