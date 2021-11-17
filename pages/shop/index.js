@@ -6,7 +6,7 @@ import Select from "react-dropdown-select";
 import "animate.css";
 import Image from "next/image";
 //images
-import nocturne from "../../public/nocturne.jpg";
+import nocturneImage from "../../public/nocturne.jpg";
 
 const sortOptions = [
   { label: "Alphabetically, A-Z", value: "az" },
@@ -17,7 +17,7 @@ const sortOptions = [
   { label: "Date, new to old", value: "dn" },
 ];
 const notesImages = {
-  nocturne: nocturne,
+  nocturne: nocturneImage,
 };
 
 const Shop = ({ productsData }) => {

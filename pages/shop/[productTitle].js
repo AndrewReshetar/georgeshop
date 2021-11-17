@@ -3,6 +3,13 @@ import { useRouter } from "next/router";
 import Modal from "../../components/Modal";
 import styles from "../../styles/Product.module.scss";
 import "animate.css";
+import Image from "next/image";
+//images
+import nocturneImage from "../../public/nocturne.jpg";
+
+const notesImages = {
+  nocturne: nocturneImage,
+};
 
 const ProductId = ({ product }) => {
   const router = useRouter();
@@ -22,7 +29,11 @@ const ProductId = ({ product }) => {
             onClick={() => setIsModalOpen(true)}
           >
             <div className={styles.zoomIcon}></div>
-            <img src={product.cloudinaryLink} alt={product.title} />
+            <Image
+              src={notesImages[product.titleQuery]}
+              alt={product.title}
+              placeholder="blur"
+            />
           </div>
           <div className={styles.productContent}>
             <div
@@ -42,8 +53,9 @@ const ProductId = ({ product }) => {
               <iframe
                 src="https://www.youtube-nocookie.com/embed/I_awMU7plpc"
                 title="YouTube video player"
-                frameBorder="0"
+                frameborder="0"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen
               ></iframe>
             </div>
           </div>
@@ -79,7 +91,11 @@ const ProductId = ({ product }) => {
         }}
       >
         <div className={styles.modalImageWrapper}>
-          <img src={product.cloudinaryLink} alt={product.title} />
+          <Image
+            src={notesImages[product.titleQuery]}
+            alt={product.title}
+            placeholder="blur"
+          />
         </div>
       </Modal>
     </>
