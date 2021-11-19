@@ -3,7 +3,7 @@
 @import "./media-queries";
 
 .homeWrapper {
-  height: 100vh;
+  min-height: 100vh;
   background-image: url("../public/george_background_home.jpg");
   padding-top: 10rem;
   background-size: cover;
@@ -19,6 +19,28 @@
     background-color: black;
     opacity: 0.7;
   }
+
+  @include from1640 {
+    padding-top: 30rem;
+  }
+  @include from1280to1640 {
+    padding-top: 15rem;
+  }
+  @include from1023to1280 {
+    padding-top: 15rem;
+  }
+  @include from768to1023 {
+    padding-top: 15rem;
+  }
+  @include from621to767 {
+    padding-top: 15rem;
+  }
+  @include from481to620 {
+    padding-top: 15rem;
+  }
+  @include from320to480 {
+    padding-top: 15rem;
+  }
 }
 
 .mainHeadline {
@@ -30,7 +52,6 @@
     font-size: 16rem;
     color: $lightred;
   }
-
   .headlineName {
     letter-spacing: -1rem;
   }
@@ -46,5 +67,127 @@
   }
   .linkToAboutPage {
     padding: 1.6rem 5rem;
+  }
+  @include from1640 {
+    left: 10rem;
+    span {
+      font-size: 25rem;
+    }
+    .headlineName {
+      letter-spacing: -0.1em;
+    }
+    .headlineSurname {
+      letter-spacing: -0.1rem;
+      line-height: 12rem;
+    }
+    .headlineDescription {
+      font-size: 5rem;
+      line-height: 20rem;
+      padding-left: 2rem;
+    }
+    .linkToAboutPage {
+      padding: 3rem 10rem;
+      font-size: 2rem;
+    }
+  }
+  @include from1023to1280 {
+    left: 10rem;
+    span {
+      font-size: 10rem;
+    }
+    .headlineName {
+      letter-spacing: -0.8rem;
+    }
+    .headlineSurname {
+      letter-spacing: -0.8rem;
+      line-height: 6rem;
+    }
+    .headlineDescription {
+      font-size: 3rem;
+      line-height: 10rem;
+    }
+    .linkToAboutPage {
+      padding: 1.6rem 5rem;
+    }
+  }
+  @include from768to1023 {
+    left: 5rem;
+    span {
+      font-size: 10rem;
+    }
+    .headlineName {
+      letter-spacing: -0.5rem;
+    }
+    .headlineSurname {
+      letter-spacing: -0.5rem;
+      line-height: 6rem;
+    }
+    .headlineDescription {
+      font-size: 3rem;
+      line-height: 10rem;
+    }
+    .linkToAboutPage {
+      padding: 1.6rem 5rem;
+    }
+  }
+  @include from621to767 {
+    left: 6rem;
+    span {
+      font-size: 8rem;
+    }
+    .headlineName {
+      letter-spacing: -0.5rem;
+    }
+    .headlineSurname {
+      letter-spacing: -0.5rem;
+      line-height: 6rem;
+    }
+    .headlineDescription {
+      font-size: 2rem;
+      line-height: 10rem;
+    }
+    .linkToAboutPage {
+      padding: 1.6rem 5rem;
+    }
+  }
+  @include from481to620 {
+    left: 2rem;
+    span {
+      font-size: 8rem;
+    }
+    .headlineName {
+      letter-spacing: -0.5rem;
+    }
+    .headlineSurname {
+      letter-spacing: -0.5rem;
+      line-height: 6rem;
+    }
+    .headlineDescription {
+      font-size: 3rem;
+      line-height: 10rem;
+    }
+    .linkToAboutPage {
+      padding: 1.6rem 5rem;
+    }
+  }
+  @include from320to480 {
+    left: 0.5rem;
+    span {
+      font-size: 7rem;
+    }
+    .headlineName {
+      letter-spacing: -0.5rem;
+    }
+    .headlineSurname {
+      letter-spacing: -0.5rem;
+      line-height: 8rem;
+    }
+    .headlineDescription {
+      font-size: 3rem;
+      line-height: 10rem;
+    }
+    .linkToAboutPage {
+      padding: 1.6rem 5rem;
+    }
   }
 }

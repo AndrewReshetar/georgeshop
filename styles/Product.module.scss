@@ -3,7 +3,7 @@
 @import "./media-queries";
 
 .productWrapper {
-  height: 84vh;
+  min-height: 84vh;
   margin-top: 10rem;
   margin-left: 14rem;
   margin-right: 14rem;
@@ -75,6 +75,8 @@
         background-image: url("../public/zoomIcon.png");
         background-size: contain;
         opacity: 0.7;
+        z-index: 1000;
+        cursor: pointer;
       }
       img {
         width: 100%;
@@ -90,9 +92,10 @@
     .productContent {
       display: flex;
       flex-direction: column;
+      justify-content: space-between;
       .productHeadline {
         h2 {
-          font-size: 9.2rem;
+          font-size: 7rem;
           font-family: "ExtraLight";
           margin: 0;
           color: $white;
@@ -112,7 +115,7 @@
         }
       }
       .youtubeLink {
-        height: 27.5rem;
+        height: 27.6rem;
         width: 50rem;
         iframe {
           width: 100%;
@@ -137,6 +140,243 @@
         border: 2px solid $lightred;
         color: $lightred;
         font-size: 1.7rem;
+      }
+    }
+  }
+  @include from1640 {
+    margin-top: 16rem;
+    margin-left: 25rem;
+    margin-right: 25rem;
+    .productGrid {
+      margin-top: 5rem;
+      .productBuyWrapper {
+        top: -18%;
+        right: 0;
+      }
+      .productContent {
+        .productHeadline {
+          h2 {
+            width: 70%;
+            font-size: 6.8rem;
+          }
+          h4 {
+            font-size: 1.5rem;
+            width: 70%;
+            span {
+              font-size: 1.5rem;
+            }
+          }
+        }
+        .youtubeLink {
+          width: 70%;
+        }
+      }
+    }
+  }
+
+  @include from1023to1280 {
+    margin-top: 16rem;
+    margin-left: 4rem;
+    margin-right: 4rem;
+    .productGrid {
+      margin-top: 4rem;
+      grid-template-columns: 40% 40%;
+      justify-content: center;
+      grid-gap: 1rem;
+      .productBuyWrapper {
+        border: none;
+        top: -18%;
+        right: 0;
+        height: 5rem;
+        .productBuyHeadline {
+          display: none;
+        }
+        .productBuyPrice {
+          display: none;
+        }
+        .productBuyButton {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          height: 100%;
+          button {
+            width: 80%;
+            height: 4.6rem;
+          }
+        }
+      }
+      .productContent {
+        .productHeadline {
+          h2 {
+            width: 100%;
+            font-size: 6.8rem;
+          }
+          h4 {
+            font-size: 1.5rem;
+            width: 100%;
+            span {
+              font-size: 1.5rem;
+            }
+          }
+        }
+        .youtubeLink {
+          width: 100%;
+        }
+      }
+    }
+  }
+
+  @include from768to1023 {
+    margin-top: 16rem;
+    margin-left: 2rem;
+    margin-right: 2rem;
+    .productGrid {
+      margin-top: 5rem;
+      grid-template-columns: 50% 50%;
+      .productBuyWrapper {
+        border: none;
+        top: 45%;
+        right: 10%;
+        height: 5rem;
+        .productBuyHeadline {
+          display: none;
+        }
+        .productBuyPrice {
+          display: none;
+        }
+        .productBuyButton {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          height: 100%;
+          button {
+            width: 100%;
+            height: 5rem;
+          }
+        }
+      }
+      .productContent {
+        padding-left: 1rem;
+        .productHeadline {
+          h2 {
+            margin-top: 1rem;
+            width: 100%;
+            font-size: 5rem;
+          }
+          h4 {
+            width: 100%;
+          }
+        }
+        .youtubeLink {
+          margin-top: -5%;
+          width: 100%;
+          height: 20rem;
+        }
+      }
+    }
+  }
+
+  @include from621to767 {
+    margin-top: 16rem;
+    margin-left: 2rem;
+    margin-right: 2rem;
+    .productGrid {
+      margin-top: 5rem;
+      grid-template-columns: 100%;
+      .productBuyWrapper {
+        top: -10rem;
+        right: 1rem;
+        width: 30rem;
+      }
+      .productImage {
+        margin-top: 8rem;
+      }
+      .productContent {
+        padding-left: 0.1rem;
+        .productHeadline {
+          h2 {
+            margin-top: 5rem;
+            font-size: 7rem;
+          }
+          h4 {
+            width: 100%;
+          }
+        }
+        .youtubeLink {
+          width: 62rem;
+          height: 30rem;
+        }
+      }
+    }
+  }
+
+  @include from481to620 {
+    margin-top: 16rem;
+    margin-left: 2rem;
+    margin-right: 2rem;
+    .productGrid {
+      margin-top: 5rem;
+      grid-template-columns: 100%;
+      .productBuyWrapper {
+        top: -10rem;
+        right: 1rem;
+        width: 30rem;
+      }
+      .productImage {
+        margin-top: 8rem;
+      }
+      .productContent {
+        padding-left: 0.1rem;
+        .productHeadline {
+          h2 {
+            margin-top: 5rem;
+            font-size: 7rem;
+          }
+          h4 {
+            width: 100%;
+          }
+        }
+        .youtubeLink {
+          width: 62rem;
+          height: 30rem;
+        }
+      }
+    }
+  }
+
+  @include from320to480 {
+    margin-top: 12rem;
+    margin-left: 2rem;
+    margin-right: 2rem;
+    .productGrid {
+      margin-top: 4rem;
+      grid-template-columns: 100%;
+      .productBuyWrapper {
+        top: 105%;
+        width: 100%;
+      }
+      .productContent {
+        padding-left: 0.1rem;
+        .productHeadline {
+          h2 {
+            margin-top: 5rem;
+            font-size: 4rem;
+          }
+          h4 {
+            width: 100%;
+          }
+        }
+        .youtubeLink {
+          width: 100%;
+          height: 18rem;
+        }
+      }
+      .productImage {
+        &:hover {
+          .zoomIcon {
+            display: none;
+          }
+        }
       }
     }
   }

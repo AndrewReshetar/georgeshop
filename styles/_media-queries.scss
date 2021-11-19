@@ -1,37 +1,39 @@
-/* smartphones, portrait iPhone, portrait 480x320 phones (Android) */
-@mixin smallMobile {
-  @media (min-width: 320px) {
+@mixin from320to480 {
+  @media (min-width: 320px) and (max-width: 480px) {
+    @content;
+  }
+}
+@mixin from481to620 {
+  @media (min-width: 481px) and (max-width: 620px) {
+    @content;
+  }
+}
+@mixin from621to767 {
+  @media (min-width: 621px) and (max-width: 768px) {
     @content;
   }
 }
 
-/* smartphones, Android phones, landscape iPhone */
-@mixin mobile {
-  @media (min-width: 480px) {
+@mixin from768to1023 {
+  @media (min-width: 768px) and (max-width: 1023px) {
     @content;
   }
 }
-/* portrait tablets, portrait iPad, e-readers (Nook/Kindle), landscape 800x480 phones (Android) */
-@mixin tabletPortrait {
-  @media (min-width: 600px) {
+
+@mixin from1023to1280 {
+  @media (min-width: 1023px) and (max-width: 1280px) {
     @content;
   }
 }
-/* tablet, landscape iPad, lo-res laptops ands desktops */
-@mixin tabletLandscape {
-  @media (min-width: 801px) {
+
+@mixin from1280to1640 {
+  @media (min-width: 1280px) and (max-width: 1640px) {
     @content;
   }
 }
-/* big landscape tablets, laptops, and desktops */
-@mixin laptop {
-  @media (min-width: 1025px) {
-    @content;
-  }
-}
-/* hi-res laptops and desktops */
-@mixin desktop {
-  @media (min-width: 1281px) {
+
+@mixin from1640 {
+  @media (min-width: 1641px) {
     @content;
   }
 }

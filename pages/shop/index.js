@@ -1,12 +1,10 @@
 import React, { useState, useEffect } from "react";
+import Image from "next/image";
 import Link from "next/link";
 import styles from "../../styles/Shop.module.scss";
 import styled from "@emotion/styled";
 import Select from "react-dropdown-select";
 import "animate.css";
-import Image from "next/image";
-//images
-import nocturneImage from "../../public/nocturne.jpg";
 
 const sortOptions = [
   { label: "Alphabetically, A-Z", value: "az" },
@@ -16,9 +14,6 @@ const sortOptions = [
   { label: "Date, old to new", value: "do" },
   { label: "Date, new to old", value: "dn" },
 ];
-const notesImages = {
-  nocturne: nocturneImage,
-};
 
 const Shop = ({ productsData }) => {
   const [searchValue, setSearchValue] = useState("");
@@ -80,7 +75,7 @@ const Shop = ({ productsData }) => {
     <div className={styles.shopWrapper}>
       <div className={`${styles.shopFilter}`}>
         <div className={styles.shopSortBy}>
-          Sort by:
+          <span>Sort by:</span>
           <StyledSelect
             options={sortOptions}
             values={[sortOptions[0]]}
@@ -112,9 +107,12 @@ const Shop = ({ productsData }) => {
                 <div className={styles.productWrapper}>
                   <div className={styles.productImg}>
                     <Image
-                      src={notesImages[p.titleQuery]}
+                      src={p.cloudinaryLink}
                       alt={p.title}
+                      width="200px"
+                      height="260px"
                       placeholder="blur"
+                      blurDataURL={p.cloudinaryLink}
                     />
                   </div>
                   <div className={styles.productContent}>
@@ -139,6 +137,7 @@ export async function getStaticProps() {
   const response = await fetch(
     "https://my-json-server.typicode.com/AndrewReshetar/georgeshop/products"
   );
+  // const response = await fetch("http://localhost:4000/products");
   const products = await response.json();
   const sortedProducts = products.sort((a, b) =>
     a.title.localeCompare(b.title)

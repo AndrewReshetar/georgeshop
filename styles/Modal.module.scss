@@ -1,3 +1,5 @@
+@import "./media-queries";
+
 .modalPopUp {
   position: fixed;
   top: 50%;
@@ -9,8 +11,12 @@
   -o-transform: translate(-50%, -50%);
   background-color: #fff;
   z-index: 1000;
-  width: 34vw;
-  height: 86vh;
+  width: 60rem;
+  height: 80rem;
+
+  @include from320to480 {
+    display: none;
+  }
 }
 .background {
   position: fixed;
@@ -20,6 +26,9 @@
   bottom: 0;
   background-color: rgba(0, 0, 0, 0.7);
   z-index: 1000;
+  @include from320to480 {
+    display: none;
+  }
 }
 
 .closeModalButton {
@@ -32,4 +41,7 @@
   cursor: pointer;
   z-index: 1000;
   font-size: 4rem;
+  @include from320to480 {
+    display: none;
+  }
 }
