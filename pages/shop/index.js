@@ -29,7 +29,7 @@ const Shop = ({ productsData }) => {
     } else {
       setProducts(productsData);
     }
-  }, [searchValue]);
+  }, [searchValue, productsData]);
 
   const renderProductsBySort = (sortBy) => {
     let sortedProducts = [];
