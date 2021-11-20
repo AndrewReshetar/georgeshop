@@ -59,4 +59,49 @@
       }
     }
   }
+  @include from1023to1280 {
+    .successMessageBlock {
+      p {
+        text-align: center;
+        line-height: 4rem;
+      }
+    }
+  }
+  @include from768to1023 {
+    .successMessageBlock {
+      p {
+        text-align: center;
+        line-height: 4rem;
+      }
+    }
+  }
+  @include from320to480 {
+    .successPageContent {
+      width: 90%;
+      height: 80%;
+      .successImageBlock {
+        .successIcon {
+          width: 8rem;
+          height: 8rem;
+        }
+      }
+      .successMessageBlock {
+        height: 50%;
+        h2 {
+          font-size: 3rem;
+          color: #2bb673;
+        }
+        p {
+          font-size: 1.7rem;
+          text-align: center;
+          line-height: 3rem;
+        }
+      }
+      .backHomeBlock {
+        button {
+          width: 80%;
+        }
+      }
+    }
+  }
 }

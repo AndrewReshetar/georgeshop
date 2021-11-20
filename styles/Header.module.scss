@@ -1,4 +1,5 @@
 @import "./media-queries";
+@import "./colors";
 
 .header {
   height: 10vh;
@@ -29,6 +30,7 @@
       }
     }
   }
+
   @include from1023to1280 {
     justify-content: flex-end;
     align-items: flex-end;
