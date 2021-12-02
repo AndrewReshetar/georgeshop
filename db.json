@@ -65,6 +65,72 @@
       "pagesQuantity": 3,
       "payLink": "https://secure.wayforpay.com/button/Yj55UsL9jy0",
       "createdAt": "2021-06-15T10:48:41.748+00:00"
+    },
+    {
+      "id": 7,
+      "title": "Waltz in D dur",
+      "titleQuery": "waltz_in_d_dur",
+      "price": "5",
+      "youtubeLink": "https://www.youtube-nocookie.com/embed/JFR7y4PSBTc",
+      "cloudinaryLink": "https://res.cloudinary.com/dqpbfb69d/image/upload/v1637769902/georgeshop/Waltz_in_D_dur_ibfs9h.jpg",
+      "pagesQuantity": 5,
+      "payLink": "https://secure.wayforpay.com/button/Yj55UsL9jy0",
+      "createdAt": "2021-04-15T10:48:41.748+00:00"
+    },
+    {
+      "id": 8,
+      "title": "Waltz in B dur",
+      "titleQuery": "waltz_in_b_dur",
+      "price": "5",
+      "youtubeLink": "https://www.youtube-nocookie.com/embed/ABBVHT1yhao",
+      "cloudinaryLink": "https://res.cloudinary.com/dqpbfb69d/image/upload/v1637934483/georgeshop/waltz_in_b_dur_nsedm2.jpg",
+      "pagesQuantity": 6,
+      "payLink": "https://secure.wayforpay.com/button/Yj55UsL9jy0",
+      "createdAt": "2021-03-15T10:48:41.748+00:00"
+    },
+    {
+      "id": 9,
+      "title": "Waltz in H moll",
+      "titleQuery": "waltz_in_h_moll",
+      "price": "5",
+      "youtubeLink": "https://www.youtube-nocookie.com/embed/FE2Z3jAFu04",
+      "cloudinaryLink": "https://res.cloudinary.com/dqpbfb69d/image/upload/v1637934726/georgeshop/Waltz-in-h-moll_qcacpd.jpg",
+      "pagesQuantity": 5,
+      "payLink": "https://secure.wayforpay.com/button/Yj55UsL9jy0",
+      "createdAt": "2021-02-15T10:48:41.748+00:00"
+    },
+    {
+      "id": 10,
+      "title": "Waltz in D moll",
+      "titleQuery": "waltz_in_d_moll",
+      "price": "5",
+      "youtubeLink": "https://www.youtube-nocookie.com/embed/jy0b-ycaKDE",
+      "cloudinaryLink": "https://res.cloudinary.com/dqpbfb69d/image/upload/v1637935401/georgeshop/Waltz_in_D_moll_yic4o5.jpg",
+      "pagesQuantity": 6,
+      "payLink": "https://secure.wayforpay.com/button/Yj55UsL9jy0",
+      "createdAt": "2021-01-15T10:48:41.748+00:00"
+    },
+    {
+      "id": 11,
+      "title": "Waltz in D moll for Elise",
+      "titleQuery": "waltz_in_d_moll_for_elise",
+      "price": "5",
+      "youtubeLink": "https://www.youtube-nocookie.com/embed/eEn1uQ1BBEY",
+      "cloudinaryLink": "https://res.cloudinary.com/dqpbfb69d/image/upload/v1637935586/georgeshop/waltz_in_d_moll_for_elise_efzjis.jpg",
+      "pagesQuantity": 3,
+      "payLink": "https://secure.wayforpay.com/button/Yj55UsL9jy0",
+      "createdAt": "2021-01-10T10:48:41.748+00:00"
+    },
+    {
+      "id": 12,
+      "title": "Etude Op.38 No.2",
+      "titleQuery": "etude_38_no_2_a_flat_major",
+      "price": "5",
+      "youtubeLink": "https://www.youtube-nocookie.com/embed/0xXDbhW9fig",
+      "cloudinaryLink": "https://res.cloudinary.com/dqpbfb69d/image/upload/v1637935760/georgeshop/etude_38_no_2_a_flat_major_fvnybz.jpg",
+      "pagesQuantity": 7,
+      "payLink": "https://secure.wayforpay.com/button/Yj55UsL9jy0",
+      "createdAt": "2021-02-18T10:48:41.748+00:00"
     }
   ]
 }

@@ -29,7 +29,7 @@
         padding: 1rem;
         span {
           display: block;
-          font-size: 1.5rem;
+          font-size: 1.3rem;
         }
       }
       .productBuyPrice {
@@ -95,7 +95,7 @@
       justify-content: space-between;
       .productHeadline {
         h2 {
-          font-size: 7rem;
+          font-size: 4.5rem;
           font-family: "ExtraLight";
           margin: 0;
           color: $white;
@@ -144,11 +144,11 @@
     }
   }
   @include from1640 {
+    max-width: 1400px;
+    margin: 0 auto;
     margin-top: 16rem;
-    margin-left: 25rem;
-    margin-right: 25rem;
     .productGrid {
-      margin-top: 5rem;
+      margin-top: 10rem;
       .productBuyWrapper {
         top: -18%;
         right: 0;
