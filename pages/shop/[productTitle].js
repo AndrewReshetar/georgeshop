@@ -100,7 +100,7 @@ export async function getStaticPaths() {
   const response = await fetch(
     "https://my-json-server.typicode.com/AndrewReshetar/georgeshop/products"
   );
-  // const response = await fetch("http://localhost:4000/products");
+  // const response = await fetch("http://localhost:5000/products");
   const products = await response.json();
   const paths = products.map((p) => {
     return {
@@ -121,7 +121,7 @@ export async function getStaticProps(context) {
     `https://my-json-server.typicode.com/AndrewReshetar/georgeshop/products/?titleQuery=${params.productTitle}`
   );
   // const response = await fetch(
-  //   `http://localhost:4000/products?titleQuery=${params.productTitle}`
+  //   `http://localhost:5000/products?titleQuery=${params.productTitle}`
   // );
   const product = await response.json();
   return {

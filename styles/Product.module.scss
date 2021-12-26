@@ -77,6 +77,9 @@
         opacity: 0.7;
         z-index: 1000;
         cursor: pointer;
+        -moz-transform: translateX(-50%) translateY(-50%);
+        -ms-transform: translateX(-50%) translateY(-50%);
+        -o-transform: translateX(-50%) translateY(-50%);
       }
       img {
         width: 100%;
@@ -203,6 +206,19 @@
             width: 80%;
             height: 4.6rem;
           }
+        }
+      }
+      .productImage {
+        .zoomIcon {
+          left: 45%;
+          top: 45%;
+          width: 10rem;
+          height: 10rem;
+          -webkit-transform: translateX(-45) 45 translateY(-45) 54;
+          transform: translateX(-45) 45 translateY(-45) 54;
+          -moz-transform: translateX(-45) 45 translateY(-45) 54;
+          -ms-transform: translateX(-45) 45 translateY(-45) 54;
+          -o-transform: translateX(-45) 45 translateY(-45) 54;
         }
       }
       .productContent {

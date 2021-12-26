@@ -17,6 +17,7 @@
     background-repeat: no-repeat;
     clip-path: polygon(30% 0, 100% 0, 100% 100%, 2% 100%);
   }
+
   @include from768to1023 {
     .aboutLeftBlock {
       width: 100%;
@@ -75,7 +76,7 @@
   }
   @include from1023to1280 {
     top: 15rem;
-    height: 100vh;
+
     h2 {
       font-size: 4.2rem;
     }
