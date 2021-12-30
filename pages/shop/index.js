@@ -136,10 +136,10 @@ const Shop = ({ productsData }) => {
 export default Shop;
 
 export async function getStaticProps() {
-  // const response = await fetch(
-  //   "https://my-json-server.typicode.com/AndrewReshetar/georgeshop/products"
-  // );
-  const response = await fetch("http://localhost:5000/products");
+  const response = await fetch(
+    "https://my-json-server.typicode.com/AndrewReshetar/georgeshop/products"
+  );
+  // const response = await fetch("http://localhost:5000/products");
   const products = await response.json();
   const sortedProducts = products.sort((a, b) =>
     a.title.localeCompare(b.title)
