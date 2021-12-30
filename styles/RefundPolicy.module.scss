@@ -1,0 +1,38 @@
+@import "./fonts";
+@import "./colors";
+@import "./media-queries";
+
+.refundPolicy {
+  min-height: 84vh;
+  margin-top: 10rem;
+  margin-left: 20rem;
+  margin-right: 20rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+
+  h2 {
+    font-size: 3rem;
+  }
+  p {
+    font-size: 1.8rem;
+    line-height: 3rem;
+  }
+
+  @include from768to1023 {
+    margin-left: 8rem;
+    margin-right: 8rem;
+  }
+  @include from621to767 {
+    margin-left: 2rem;
+    margin-right: 2rem;
+  }
+  @include from481to620 {
+    margin-left: 2rem;
+    margin-right: 2rem;
+  }
+  @include from320to480 {
+    margin-left: 1rem;
+    margin-right: 1rem;
+  }
+}

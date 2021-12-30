@@ -4,6 +4,7 @@ import Modal from "../../components/Modal";
 import styles from "../../styles/Product.module.scss";
 import "animate.css";
 import Image from "next/image";
+import Footer from "../../components/Footer";
 
 const ProductId = ({ product }) => {
   const router = useRouter();
@@ -72,6 +73,7 @@ const ProductId = ({ product }) => {
             </div>
           </div>
         </div>
+        <Footer />
       </div>
       <Modal
         open={isModalOpen}
@@ -97,10 +99,10 @@ const ProductId = ({ product }) => {
 export default ProductId;
 
 export async function getStaticPaths() {
-  const response = await fetch(
-    "https://my-json-server.typicode.com/AndrewReshetar/georgeshop/products"
-  );
-  // const response = await fetch("http://localhost:5000/products");
+  // const response = await fetch(
+  //   "https://my-json-server.typicode.com/AndrewReshetar/georgeshop/products"
+  // );
+  const response = await fetch("http://localhost:5000/products");
   const products = await response.json();
   const paths = products.map((p) => {
     return {
@@ -117,12 +119,12 @@ export async function getStaticPaths() {
 
 export async function getStaticProps(context) {
   const { params } = context;
-  const response = await fetch(
-    `https://my-json-server.typicode.com/AndrewReshetar/georgeshop/products/?titleQuery=${params.productTitle}`
-  );
   // const response = await fetch(
-  //   `http://localhost:5000/products?titleQuery=${params.productTitle}`
+  //   `https://my-json-server.typicode.com/AndrewReshetar/georgeshop/products/?titleQuery=${params.productTitle}`
   // );
+  const response = await fetch(
+    `http://localhost:5000/products?titleQuery=${params.productTitle}`
+  );
   const product = await response.json();
   return {
     props: {

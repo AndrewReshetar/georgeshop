@@ -1,0 +1,49 @@
+@import "./fonts";
+@import "./colors";
+@import "./media-queries";
+
+.termsAndConditions {
+  min-height: 84vh;
+  margin-top: 10rem;
+  margin-left: 20rem;
+  margin-right: 20rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  h2 {
+    font-size: 4rem;
+  }
+  h3 {
+    font-size: 2.5rem;
+  }
+  span {
+    font-size: 1.4rem;
+    font-style: italic;
+  }
+  .contactInfo {
+    font-style: normal;
+    font-size: 1.6rem;
+    color: $lightred;
+  }
+  p {
+    font-size: 1.8rem;
+    line-height: 2.5rem;
+  }
+
+  @include from768to1023 {
+    margin-left: 8rem;
+    margin-right: 8rem;
+  }
+  @include from621to767 {
+    margin-left: 2rem;
+    margin-right: 2rem;
+  }
+  @include from481to620 {
+    margin-left: 2rem;
+    margin-right: 2rem;
+  }
+  @include from320to480 {
+    margin-left: 1rem;
+    margin-right: 1rem;
+  }
+}

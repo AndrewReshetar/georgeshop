@@ -1,10 +1,24 @@
-import React from "react";
+import React, { useState } from "react";
 import Link from "next/link";
 import styles from "../styles/Header.module.scss";
 
 const Header = () => {
+  const [navbarStyle, setNavbarStyle] = useState(false);
+
+  const changeBackground = () => {
+    if (window.scrollY >= 100) {
+      setNavbarStyle(true);
+    } else {
+      setNavbarStyle(false);
+    }
+  };
+
+  if (typeof window !== "undefined") {
+    window.addEventListener("scroll", changeBackground);
+  }
+
   return (
-    <header className={styles.header}>
+    <header className={`${!navbarStyle ? styles.header : styles.headerActive}`}>
       <nav className={styles.nav}>
         <ul>
           <Link href="/" passHref>

@@ -5,6 +5,7 @@ import styles from "../../styles/Shop.module.scss";
 import styled from "@emotion/styled";
 import Select from "react-dropdown-select";
 import "animate.css";
+import Footer from "../../components/Footer";
 
 const sortOptions = [
   { label: "Alphabetically, A-Z", value: "az" },
@@ -127,6 +128,7 @@ const Shop = ({ productsData }) => {
           <h2 className={styles.noItemsFound}>No items found</h2>
         )}
       </div>
+      <Footer />
     </div>
   );
 };
@@ -134,10 +136,10 @@ const Shop = ({ productsData }) => {
 export default Shop;
 
 export async function getStaticProps() {
-  const response = await fetch(
-    "https://my-json-server.typicode.com/AndrewReshetar/georgeshop/products"
-  );
-  // const response = await fetch("http://localhost:5000/products");
+  // const response = await fetch(
+  //   "https://my-json-server.typicode.com/AndrewReshetar/georgeshop/products"
+  // );
+  const response = await fetch("http://localhost:5000/products");
   const products = await response.json();
   const sortedProducts = products.sort((a, b) =>
     a.title.localeCompare(b.title)
