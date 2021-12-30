@@ -11,6 +11,8 @@ function MyApp({ Component, pageProps }) {
     <>
       <Head>
         <title>George Reshetar- Official page</title>
+        <link rel="icon" href="logo.svg" />
+        <link rel="apple-touch-icon" href="logo.svg" />
         <meta name="author" content="George Reshetar" />
         <meta
           name="keywords"
