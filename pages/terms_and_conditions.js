@@ -39,7 +39,7 @@ const TermsAndConditions = () => {
         non-delivery of Your Order.
       </p>
       <p>
-        If the payment is payment, the notes will be available on your email
+        If the payment is successful, the notes will be available on your email
         within 24 hours from the date of purchase.
       </p>
       <h3>4. Intellectual Property</h3>
