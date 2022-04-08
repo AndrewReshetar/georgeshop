@@ -37,7 +37,7 @@ const ProductId = ({ product }) => {
             <div
               className={`${styles.productHeadline} animate__animated animate__fadeIn`}
             >
-              <h2>{product.title}</h2>
+              <h2 style={product.title.length > 20 ? {fontSize: "3.5rem"} : {fontSize: "4.5rem"}}>{product.title}</h2>
               <h4>
                 Pages: <span>{product.pagesQuantity}</span>
               </h4>
@@ -62,7 +62,7 @@ const ProductId = ({ product }) => {
           >
             <div className={styles.productBuyHeadline}>
               <span>Title:</span>
-              <span>{product.title}</span>
+              <span style={product.title.length > 20 ? {fontSize: "1.1rem", paddingTop:"1px"} : {fontSize: "1.5rem"}}>{product.title}</span>
             </div>
             <div className={styles.productBuyPrice}>
               <span>Price:</span>
